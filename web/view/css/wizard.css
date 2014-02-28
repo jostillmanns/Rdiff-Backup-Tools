@@ -1,0 +1,48 @@
+/* House keeping stuff */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header, section, footer, aside, nav, article, hgroup {
+    display:block;
+}
+/* End House keeping stuff */
+
+#forms {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+
+    display: box;
+    box-orient: horizontal;
+
+    width: 60% ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.config {
+    text-align: right;
+    padding: 10px;
+}
+
+.config:nth-of-type(1) {
+    border-right: 1px solid black;
+}
+
+button, input {
+    margin: 5px;
+}
+
+.rdiff-form {
+    border-bottom-width: 50%;
+    border-bottom:1px solid black;
+}
+
+.physical-form {
+    border-bottom-width: 50%;
+    border-bottom:1px solid black;
+}

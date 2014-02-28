@@ -1,0 +1,185 @@
+/* Copyright (c) 2013 ICRL */
+
+/* See the file license.txt for copying permission. */
+
+/* Color informations */
+/* Menu: ece9d8 */
+/* path-info: 0054e3 */
+/* select: b4c8dc */
+/* select-font: 000080 */
+
+/* House keeping stuff */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header, section, footer, aside, nav, article, hgroup {
+    display:block;
+}
+/* End House keeping stuff */
+
+.filetree {
+    /* basic styling */
+    width: 100%;
+    /* height: 300px; */
+    border: 1px solid #555;
+    
+    /* flexbox setup */
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    
+    display: box;
+    box-orient: horizontal;    
+}
+
+.filetree > div:nth-child(1) {
+    border: 1px solid blue;
+}
+
+/* our colors */
+/* .filetree > div:nth-child(1){ background : #FCC; } */
+/* .filetree > div:nth-child(2){ background : #CFC; } */
+
+.filetree > div { 
+    /* width:50%; */
+
+    -moz-box-flex: 1;       /* Mozilla */
+    -webkit-box-flex: 1;    /* WebKit */
+}
+
+ /* base path  */
+.filetree > div > #basepath {
+    width: 100%;
+
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+
+    display: box;
+    box-orient: horizontal;
+
+    display:inline-block;
+
+    background: #ece9d8;
+}
+
+.filetree > div > #basepath > div:nth-child(1){
+    margin-right:5px;
+}
+
+.filetree > div > .path-information {
+    width: 100%;
+
+    color: white;
+    background: #0054e3;
+}
+
+.filetree > div > #files {
+    height:700px;    
+    overflow: auto;    
+}
+
+.filetree > div > #files > table{
+    width:100%
+}
+
+.filetree > div > #files > table > thead {
+    width:100%;
+    background-color: #ece9d8;
+}
+
+td > img {
+    width:15px;
+}
+
+.filetree > div > .selection-information {
+    width:100%;
+    background-color: #ece9d8;
+    bottom: 0;
+}
+
+#loadimage {
+    position: relative;
+    display: none;
+    left: 50%;
+    top: 50%;
+}
+
+#actions > button {
+    float: left;
+    width: 50%;
+}
+
+#logs {
+    height: 300px;
+    overflow: auto;
+}
+
+/* Actually I copied this code from JQuery File Tree http://www.abeautifulsite.net/blog/2008/03/jquery-file-tree/.
+ All the credit belong to those guys.*/
+/* extension pics  */
+.extDIR { padding: 10px; float: left; background: url(png/directory.png) left top no-repeat; }
+.extdir { padding: 10px; float: left; background: url(png/directory.png) left top no-repeat; }
+.ext_3gp { padding: 10px; float: left; background: url(png/film.png) left top no-repeat; }
+.ext_afp { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_afpa { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_asp { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_aspx { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_avi { padding: 10px; float: left; background: url(png/film.png) left top no-repeat; }
+.ext_bat { padding: 10px; float: left; background: url(png/application.png) left top no-repeat; }
+.ext_bmp { padding: 10px; float: left; background: url(png/picture.png) left top no-repeat; }
+.ext_c { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_cfm { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_cgi { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_com { padding: 10px; float: left; background: url(png/application.png) left top no-repeat; }
+.ext_cpp { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_css { padding: 10px; float: left; background: url(png/css.png) left top no-repeat; }
+.ext_doc { padding: 10px; float: left; background: url(png/doc.png) left top no-repeat; }
+.ext_exe { padding: 10px; float: left; background: url(png/application.png) left top no-repeat; }
+.ext_gif { padding: 10px; float: left; background: url(png/picture.png) left top no-repeat; }
+.ext_fla { padding: 10px; float: left; background: url(png/flash.png) left top no-repeat; }
+.ext_h { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_htm { padding: 10px; float: left; background: url(png/html.png) left top no-repeat; }
+.ext_html { padding: 10px; float: left; background: url(png/html.png) left top no-repeat; }
+.ext_jar { padding: 10px; float: left; background: url(png/java.png) left top no-repeat; }
+.ext_jpg { padding: 10px; float: left; background: url(png/picture.png) left top no-repeat; }
+.ext_jpeg { padding: 10px; float: left; background: url(png/picture.png) left top no-repeat; }
+.ext_js { padding: 10px; float: left; background: url(png/script.png) left top no-repeat; }
+.ext_lasso { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_log { padding: 10px; float: left; background: url(png/txt.png) left top no-repeat; }
+.ext_m4p { padding: 10px; float: left; background: url(png/music.png) left top no-repeat; }
+.ext_mov { padding: 10px; float: left; background: url(png/film.png) left top no-repeat; }
+.ext_mp3 { padding: 10px; float: left; background: url(png/music.png) left top no-repeat; }
+.ext_mp4 { padding: 10px; float: left; background: url(png/film.png) left top no-repeat; }
+.ext_mpg { padding: 10px; float: left; background: url(png/film.png) left top no-repeat; }
+.ext_mpeg { padding: 10px; float: left; background: url(png/film.png) left top no-repeat; }
+.ext_ogg { padding: 10px; float: left; background: url(png/music.png) left top no-repeat; }
+.ext_pcx { padding: 10px; float: left; background: url(png/picture.png) left top no-repeat; }
+.ext_pdf { padding: 10px; float: left; background: url(png/pdf.png) left top no-repeat; }
+.ext_php { padding: 10px; float: left; background: url(png/php.png) left top no-repeat; }
+.ext_png { padding: 10px; float: left; background: url(png/picture.png) left top no-repeat; }
+.ext_ppt { padding: 10px; float: left; background: url(png/ppt.png) left top no-repeat; }
+.ext_psd { padding: 10px; float: left; background: url(png/psd.png) left top no-repeat; }
+.ext_pl { padding: 10px; float: left; background: url(png/script.png) left top no-repeat; }
+.ext_py { padding: 10px; float: left; background: url(png/script.png) left top no-repeat; }
+.ext_rb { padding: 10px; float: left; background: url(png/ruby.png) left top no-repeat; }
+.ext_rbx { padding: 10px; float: left; background: url(png/ruby.png) left top no-repeat; }
+.ext_rhtml { padding: 10px; float: left; background: url(png/ruby.png) left top no-repeat; }
+.ext_rpm { padding: 10px; float: left; background: url(png/linux.png) left top no-repeat; }
+.ext_ruby { padding: 10px; float: left; background: url(png/ruby.png) left top no-repeat; }
+.ext_sql { padding: 10px; float: left; background: url(png/db.png) left top no-repeat; }
+.ext_swf { padding: 10px; float: left; background: url(png/flash.png) left top no-repeat; }
+.ext_tif { padding: 10px; float: left; background: url(png/picture.png) left top no-repeat; }
+.ext_tiff { padding: 10px; float: left; background: url(png/picture.png) left top no-repeat; }
+.ext_txt { padding: 10px; float: left; background: url(png/txt.png) left top no-repeat; }
+.ext_vb { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_wav { padding: 10px; float: left; background: url(png/music.png) left top no-repeat; }
+.ext_wmv { padding: 10px; float: left; background: url(png/film.png) left top no-repeat; }
+.ext_xls { padding: 10px; float: left; background: url(png/xls.png) left top no-repeat; }
+.ext_xml { padding: 10px; float: left; background: url(png/code.png) left top no-repeat; }
+.ext_zip { padding: 10px; float: left; background: url(png/zip.png) left top no-repeat; } 

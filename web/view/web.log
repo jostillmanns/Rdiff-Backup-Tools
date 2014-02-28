@@ -1,0 +1,480 @@
+2014/02/28 10:13:30 http: panic serving [::1]:56264: runtime error: slice bounds out of range
+goroutine 18 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc20805ae00, 0x2, 0x2, 0xc208108570, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x776
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f0c12ac79d0, 0xc208063c20, 0xc208000a90)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f0c12ac79d0, 0xc208063c20, 0xc208000a90)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f0c12ac79d0, 0xc208063c20, 0xc208000a90)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f0c12ac79d0, 0xc208063c20, 0xc208000a90)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071f00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:30 http: panic serving [::1]:56265: runtime error: slice bounds out of range
+goroutine 19 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2080e7e00, 0x2, 0x2, 0xc2080ec2a0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x776
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f0c12ac79d0, 0xc208062000, 0xc208000c30)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f0c12ac79d0, 0xc208062000, 0xc208000c30)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f0c12ac79d0, 0xc208062000, 0xc208000c30)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f0c12ac79d0, 0xc208062000, 0xc208000c30)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071b80)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:30 http: panic serving [::1]:56266: runtime error: slice bounds out of range
+goroutine 20 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2080e6200, 0x2, 0x2, 0xc2080edda0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x776
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f0c12ac79d0, 0xc208063c20, 0xc208000a90)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f0c12ac79d0, 0xc208063c20, 0xc208000a90)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f0c12ac79d0, 0xc208063c20, 0xc208000a90)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f0c12ac79d0, 0xc208063c20, 0xc208000a90)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208119080)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:36 http: panic serving [::1]:56268: runtime error: slice bounds out of range
+goroutine 22 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081d0f80, 0x2, 0x2, 0xc2080ed020, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x776
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f0c12ac79d0, 0xc208062780, 0xc208001a00)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f0c12ac79d0, 0xc208062780, 0xc208001a00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f0c12ac79d0, 0xc208062780, 0xc208001a00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f0c12ac79d0, 0xc208062780, 0xc208001a00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc20818e380)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:36 http: panic serving [::1]:56267: runtime error: slice bounds out of range
+goroutine 21 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081ff680, 0x2, 0x2, 0xc2080ed2f0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x776
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f0c12ac79d0, 0xc208062820, 0xc208001d40)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f0c12ac79d0, 0xc208062820, 0xc208001d40)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f0c12ac79d0, 0xc208062820, 0xc208001d40)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f0c12ac79d0, 0xc208062820, 0xc208001d40)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc20818e280)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:36 http: panic serving [::1]:56269: runtime error: slice bounds out of range
+goroutine 23 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc208041e80, 0x2, 0x2, 0xc2080ec300, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x776
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f0c12ac79d0, 0xc208062000, 0xc208001520)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f0c12ac79d0, 0xc208062000, 0xc208001520)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f0c12ac79d0, 0xc208062000, 0xc208001520)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f0c12ac79d0, 0xc208062000, 0xc208001520)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc20818e480)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:36 http: panic serving [::1]:56270: runtime error: slice bounds out of range
+goroutine 24 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081d01c0, 0x2, 0x2, 0xc2080ed1d0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x776
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f0c12ac79d0, 0xc208062820, 0xc208001d40)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f0c12ac79d0, 0xc208062820, 0xc208001d40)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f0c12ac79d0, 0xc208062820, 0xc208001d40)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f0c12ac79d0, 0xc208062820, 0xc208001d40)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc2081fe200)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:57 http: panic serving [::1]:56271: runtime error: slice bounds out of range
+goroutine 18 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc20805ad40, 0x2, 0x2, 0xc208106ab0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x767
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7fa6111229f0, 0xc2080637c0, 0xc208001040)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7fa6111229f0, 0xc2080637c0, 0xc208001040)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7fa6111229f0, 0xc2080637c0, 0xc208001040)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7fa6111229f0, 0xc2080637c0, 0xc208001040)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071f00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:57 http: panic serving [::1]:56272: runtime error: slice bounds out of range
+goroutine 19 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2080e9e00, 0x2, 0x2, 0xc2080ec330, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x767
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7fa6111229f0, 0xc208062000, 0xc208000f70)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7fa6111229f0, 0xc208062000, 0xc208000f70)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7fa6111229f0, 0xc208062000, 0xc208000f70)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7fa6111229f0, 0xc208062000, 0xc208000f70)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071e00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:57 http: panic serving [::1]:56273: runtime error: slice bounds out of range
+goroutine 20 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2080e9f40, 0x2, 0x2, 0xc2080edec0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x767
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7fa6111229f0, 0xc2080637c0, 0xc208001110)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7fa6111229f0, 0xc2080637c0, 0xc208001110)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7fa6111229f0, 0xc2080637c0, 0xc208001110)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7fa6111229f0, 0xc2080637c0, 0xc208001110)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071d80)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:13:57 http: panic serving [::1]:56274: runtime error: slice bounds out of range
+goroutine 21 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc208165500, 0x2, 0x2, 0xc2080edbc0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x767
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7fa6111229f0, 0xc208063680, 0xc2080011e0)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7fa6111229f0, 0xc208063680, 0xc2080011e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7fa6111229f0, 0xc208063680, 0xc2080011e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7fa6111229f0, 0xc208063680, 0xc2080011e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208276a80)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:16:33 http: panic serving [::1]:56275: runtime error: slice bounds out of range
+goroutine 18 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa229f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc20805ad40, 0x2, 0x2, 0xc20810cab0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x88e
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f08dc17c9b0, 0xc2080637c0, 0xc2080011e0)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f08dc17c9b0, 0xc2080637c0, 0xc2080011e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f08dc17c9b0, 0xc2080637c0, 0xc2080011e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f08dc17c9b0, 0xc2080637c0, 0xc2080011e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071f00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:16:33 http: panic serving [::1]:56277: runtime error: slice bounds out of range
+goroutine 20 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa229f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2080cfe00, 0x2, 0x2, 0xc2080f2330, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x88e
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f08dc17c9b0, 0xc208062000, 0xc208000ea0)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f08dc17c9b0, 0xc208062000, 0xc208000ea0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f08dc17c9b0, 0xc208062000, 0xc208000ea0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f08dc17c9b0, 0xc208062000, 0xc208000ea0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071d80)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:16:33 http: panic serving [::1]:56276: runtime error: slice bounds out of range
+goroutine 19 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa229f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2080ce140, 0x2, 0x2, 0xc2080f3e30, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x88e
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f08dc17c9b0, 0xc2080637c0, 0xc2080012b0)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f08dc17c9b0, 0xc2080637c0, 0xc2080012b0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f08dc17c9b0, 0xc2080637c0, 0xc2080012b0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f08dc17c9b0, 0xc2080637c0, 0xc2080012b0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071e00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:16:33 http: panic serving [::1]:56278: runtime error: slice bounds out of range
+goroutine 21 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa229f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081d72c0, 0x2, 0x2, 0xc2080f23c0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x88e
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f08dc17c9b0, 0xc208062000, 0xc208000ea0)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f08dc17c9b0, 0xc208062000, 0xc208000ea0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f08dc17c9b0, 0xc208062000, 0xc208000ea0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f08dc17c9b0, 0xc208062000, 0xc208000ea0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc2080be280)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:16:47 http: panic serving [::1]:56279: runtime error: slice bounds out of range
+goroutine 22 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa229f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081c5900, 0x2, 0x2, 0xc2080f3170, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x88e
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f08dc17c9b0, 0xc208063c20, 0xc208001040)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f08dc17c9b0, 0xc208063c20, 0xc208001040)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f08dc17c9b0, 0xc208063c20, 0xc208001040)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f08dc17c9b0, 0xc208063c20, 0xc208001040)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208274a80)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:16:47 http: panic serving [::1]:56280: runtime error: slice bounds out of range
+goroutine 23 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa229f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc208087f00, 0x2, 0x2, 0xc2080f3350, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x88e
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f08dc17c9b0, 0xc208062000, 0xc208000340)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f08dc17c9b0, 0xc208062000, 0xc208000340)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f08dc17c9b0, 0xc208062000, 0xc208000340)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f08dc17c9b0, 0xc208062000, 0xc208000340)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208274b00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:16:47 http: panic serving [::1]:56281: runtime error: slice bounds out of range
+goroutine 24 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa229f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081c40c0, 0x2, 0x2, 0xc2080f30b0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:271 +0x88e
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f08dc17c9b0, 0xc208063c20, 0xc208000750)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f08dc17c9b0, 0xc208063c20, 0xc208000750)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f08dc17c9b0, 0xc208063c20, 0xc208000750)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f08dc17c9b0, 0xc208063c20, 0xc208000750)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208274b80)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:17:51 http: panic serving [::1]:56288: runtime error: slice bounds out of range
+goroutine 21 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc20805bac0, 0x2, 0x2, 0xc20808a5a0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:275 +0x6e2
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f917e902908, 0xc208063540, 0xc208001790)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f917e902908, 0xc208063540, 0xc208001790)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f917e902908, 0xc208063540, 0xc208001790)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f917e902908, 0xc208063540, 0xc208001790)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071d80)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:17:51 http: panic serving [::1]:56285: runtime error: slice bounds out of range
+goroutine 18 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc208101fc0, 0x2, 0x2, 0xc20800cc60, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:275 +0x6e2
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f917e902908, 0xc208062000, 0xc2080015f0)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f917e902908, 0xc208062000, 0xc2080015f0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f917e902908, 0xc208062000, 0xc2080015f0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f917e902908, 0xc208062000, 0xc2080015f0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071f00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:17:51 http: panic serving [::1]:56287: runtime error: slice bounds out of range
+goroutine 20 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081b7180, 0x2, 0x2, 0xc20800cf90, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:275 +0x6e2
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f917e902908, 0xc2080620a0, 0xc208001380)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f917e902908, 0xc2080620a0, 0xc208001380)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f917e902908, 0xc2080620a0, 0xc208001380)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f917e902908, 0xc2080620a0, 0xc208001380)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071e00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:17:51 http: panic serving [::1]:56286: runtime error: slice bounds out of range
+goroutine 19 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081e3e40, 0x2, 0x2, 0xc20800cc90, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:275 +0x6e2
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f917e902908, 0xc208062000, 0xc2080012b0)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f917e902908, 0xc208062000, 0xc2080012b0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f917e902908, 0xc208062000, 0xc2080012b0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f917e902908, 0xc208062000, 0xc2080012b0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071e80)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:17:51 http: panic serving [::1]:56289: runtime error: slice bounds out of range
+goroutine 22 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc2081e2180, 0x2, 0x2, 0xc20800cea0, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:275 +0x6e2
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f917e902908, 0xc2080620a0, 0xc208000750)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f917e902908, 0xc2080620a0, 0xc208000750)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f917e902908, 0xc2080620a0, 0xc208000750)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f917e902908, 0xc2080620a0, 0xc208000750)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071d00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b
+2014/02/28 10:18:08 http: panic serving [::1]:56291: runtime error: slice bounds out of range
+goroutine 18 [running]:
+net/http.func·010()
+	/home/joschka/build/go/src/pkg/net/http/server.go:1088 +0xbd
+runtime.panic(0x694920, 0xa219f6)
+	/home/joschka/build/go/src/pkg/runtime/panic.c:232 +0x110
+github.com/jostillmanns/rdiff-backup-tools/utils.(*Repository).TimeStamps(0xc20805bb40, 0x2, 0x2, 0xc20800d470, 0x21, ...)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/utils/utils.go:275 +0x6e2
+github.com/jostillmanns/rdiff-backup-tools/web.rdiffElements(0x7f9749a9e908, 0xc208062000, 0xc2080004e0)
+	/home/joschka/go/src/github.com/jostillmanns/rdiff-backup-tools/web/commander.go:113 +0x82b
+net/http.HandlerFunc.ServeHTTP(0x75b910, 0x7f9749a9e908, 0xc208062000, 0xc2080004e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1222 +0x40
+net/http.(*ServeMux).ServeHTTP(0xc20800c630, 0x7f9749a9e908, 0xc208062000, 0xc2080004e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1498 +0x163
+net/http.serverHandler.ServeHTTP(0xc208029e50, 0x7f9749a9e908, 0xc208062000, 0xc2080004e0)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1599 +0x16d
+net/http.(*conn).serve(0xc208071f00)
+	/home/joschka/build/go/src/pkg/net/http/server.go:1162 +0x7e4
+created by net/http.(*Server).Serve
+	/home/joschka/build/go/src/pkg/net/http/server.go:1646 +0x29b

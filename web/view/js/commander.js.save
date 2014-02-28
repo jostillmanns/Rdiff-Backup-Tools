@@ -1,0 +1,310 @@
+// -*- mode: javascript -*-
+// Copyright (c) 2013 ICRL
+
+// See the file license.txt for copying permission.
+
+var tables = [];
+var cSelect = "#b4c8dc";
+var cUSelect = "white";
+var cPressed = false;
+
+var units = ["Byte", "KB", "MB", "GB", "TB",  "PB", "EB", "ZB"];
+
+var tree = {}
+
+var getRepos = function () {
+    $.each(tables, function(i, n){
+
+	$.ajax({
+	    async: false,
+	    //cache: false,
+	    dataType: 'json',
+	    type: 'GET',
+	    url: n.repoUrl
+	}).done(function(data) {
+	    n.repos = data;	    
+	});
+
+	n.currentRepo = n.repos[0];
+    });
+}
+
+var fillRepos = function() {
+    $.each(tables, function(i, n){
+	$.each(n.repos, function(index, repo){
+	    var length = n.reposSelect.length;
+	    n.reposSelect[length] = new Option(repo.Name);
+	});
+    });
+}
+
+var getElements = function(table, path, root) {
+    table.elements = [];
+
+    if (root && table.id == "physical") { path = table.currentRepo.Path; }
+
+    if (table.id == "rdiff" && tree[path] != null && path != "") {
+	table.elements = tree[path]
+	fillTable(table);
+	return
+    }
+
+    $.ajax({
+	async: true,
+	// cache: false,
+	dataType: 'json',
+	type: 'GET',
+	url: table.elementUrl,
+	data:{ path: path, repo: table.currentRepo.Id},
+	success: function(data) {
+	    table.elements = data;
+	    fillTable(table);
+	    tree[path] = table.elements
+	}
+    });
+
+    table.workingDir = path;
+    $(table.pathInformation).html(path.replace(table.currentRepo.Path, "root:"));
+}
+
+var fillTable = function(table) {
+
+    table.tabledom.html("");
+    $.each(table.elements, function(i, n){
+	var domTable = document.getElementById(table.tableId.replace("#", ""));
+	var row = domTable.insertRow(i);
+
+	var id = row.insertCell(0);
+	var name = row.insertCell(1);
+	var ext = row.insertCell(2);
+	var size = row.insertCell(3);
+	var date = row.insertCell(4);
+	
+	id.innerHTML = n.Id;
+	name.innerHTML = "<div class='ext_" + n.Ext.toLowerCase().replace(".", "") + "'></div>" + n.Name;
+	ext.innerHTML = n.Ext;
+	size.innerHTML = formatSize(n.Size);
+	date.innerHTML = n.Date;
+    });
+
+    table.totalDir = $.grep(table.elements, function(n, i) {
+	return n.IsDir;
+    }).length;
+    table.totalFile = $.grep(table.elements, function(n, i) {
+	return !n.IsDir;
+    }).length;
+    table.totalSize = 0;
+    $.each(table.elements, function(i, n){
+	table.totalSize = table.totalSize + n.Size;
+    });
+
+    addTableEvents(table);
+    updateSelectInformation(table);
+}
+
+var addTableEvents = function(table) {
+    $(table.tableId + "> tr").each(function () {
+	this.onclick = function (row) {
+	    rowSelect(this, cPressed, table);
+	}
+
+	this.ondblclick = function () {
+	    cd(this, table);
+	}
+
+    });
+}
+
+var rowSelect = function(row, ctrl, table) {
+    if (ctrl) {
+	if (row.bgColor == cSelect)
+	    row.bgColor = cUSelect;
+	else
+	    row.bgColor = cSelect;		
+    }
+    else {
+	$(table.tableId + " > tr").each(function (){
+	    this.bgColor = cUSelect;
+	});
+	row.bgColor = cSelect;
+    }
+
+    table.selectedElements = [];
+    $(table.tableId + " > tr").each(function (){
+	id = this.cells[0].innerHTML;
+
+	if(this.bgColor == cSelect) {
+	    var obj = $.grep(table.elements, function (n, i) {
+		return (n.Id + "" == id);
+	    })[0];
+	    table.selectedElements.push(obj);
+	}
+    });
+
+    table.totalSelectedDir = $.grep(table.selectedElements, function(n, i){
+	return n.IsDir;
+    }).length;
+
+    table.totalSelectedFile = $.grep(table.selectedElements, function(n, i){
+	return !n.IsDir;
+    }).length;
+
+    table.totalSelectedSize = 0;
+    $.each(table.selectedElements, function(i, n){
+	table.totalSelectedSize = table.totalSelectedSize + n.Size;
+    });
+
+    updateSelectInformation(table);
+}
+
+var cd = function (row, table) {
+    var id = row.cells[0].innerHTML;
+
+    object = $.grep(table.elements, function(n, i){
+	return (n.Id == id);
+    })[0];
+
+    if(!object.IsDir) return;
+    getElements(table, object.LinksTo, false, 0);
+    fillTable(table);
+
+    table.n = 0
+}
+
+var formatSize = function(size) {
+    var SizeUnit = 0;
+    while (size > 1024) {
+	size = size/1024;
+	SizeUnit++;
+    }
+
+    return size.toFixed(0) + " " + units[SizeUnit];
+}
+
+var updateSelectInformation = function (table) {
+    $(table.selectInformation).html(
+	formatSize(table.totalSelectedSize) + " / " +
+	    formatSize(table.totalSize) + " in " +
+	    table.totalSelectedFile + " / " +
+	    table.totalFile + " files, " +
+	    table.totalSelectedDir + " / " +
+	    table.totalDir + "dir(s)"
+    );
+}
+
+var restore = function() {
+    $.ajax({
+	async: true, 
+	// cache: false,
+	type: 'GET',
+	url: tables[0].restoreUrl,
+	data: {
+	    src:    JSON.stringify(tables[0].selectedElements),
+	    dest:   tables[1].workingDir,
+	    repo:   tables[0].workingDir,
+	    origin: tables[0].currentRepo.Path,
+	    tmp:    tables[0].currentRepo.TmpDir
+	}
+    }).done(function(data){
+	getElements(tables[1], tables[1].workingDir, false);
+	fillTable(tables[1])
+    });   
+}
+
+$(document).ajaxStart(function(){
+    $('#loadimage').show();
+});
+
+$(document).ajaxStop(function(){
+    $('#loadimage').hide();
+});
+
+$(document).ready(function (){
+
+    tables = [    
+	{
+	    id:                "rdiff",
+	    elements:          [],
+	    repos:             [],
+	    selectedElements:  [],
+	    totalDir:          0,
+	    totalFile:         0,
+	    totalSize:         0,
+	    totalSelectedDir:  0,
+	    totalSelectedFile: 0,
+	    totalSelectedSize: 0,
+
+	    repoUrl:           'rdiffrepo',
+	    elementUrl:        'rdifffiles',
+	    restoreUrl:        'restore',
+	    currentRepo:       null,
+
+	    tabledom:          $("#rdiff-table"),
+	    tableId:           "#rdiff-table",
+	    reposSelect:       $("select")[0],
+	    fileTable:         $("#rdiff-table"),
+	    selectInformation: $(".selection-information")[0],
+	    pathInformation:   $(".path-information")[0],
+	    workingDir:        ""
+	},
+	{
+	    id:                "physical",
+	    elements:          [],
+	    repos:             [],
+	    selectedElements:  [],
+	    totalDir:          0,
+	    totalFile:         0,
+	    totalSize:         0,
+	    totalSelectedDir:  0,
+	    totalSelectedFile: 0,
+	    totalSelectedSize: 0,
+
+	    repoUrl:           'physicalrepo',
+	    elementUrl:        'physicalfiles',
+	    currentRepo:       null,
+
+	    tabledom:          $("#physical-table"),
+	    tableId:           "#physical-table",
+	    reposSelect:       $("select")[1],
+	    fileTable:         $("#physical-table"),
+	    selectInformation: $(".selection-information")[1],
+	    pathInformation:   $(".path-information")[1],
+	    workingDir:        ""
+	}
+    ];
+
+    //check if ctrl key is pressed
+    document.body.onkeydown = function (key) {
+	cPressed = key.ctrlKey;
+    }
+
+    //check if ctrl key is released
+    document.body.onkeyup = function (key) {
+	cPressed = false;
+    }
+
+    document.body.onkeypress = function(key) {
+	if (key.keyCode == 53)
+	    restore
+    }
+
+    $("#restore").bind('click', function(){restore();})    
+
+    $($("select")[0]).change(function(){
+	tables[0].currentRepo = tables[0].repos[this.selectedIndex];
+
+	getElements(tables[0], "", true);
+	
+    });
+    
+    $($("select")[1]).change(function(){
+	tables[1].currentRepo = tables[1].repos[this.selectedIndex];
+	getElements(tables[1], "", true);
+    });
+
+    getRepos();
+    fillRepos();
+
+    getElements(tables[0], "", true, 0);
+    getElements(tables[1], "", true, 0);
+});
